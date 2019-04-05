@@ -1,2 +1,2 @@
 # react-WebAPP
-Web
+Web app based on react.js
