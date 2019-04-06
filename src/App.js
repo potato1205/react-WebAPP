@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import  { HelloWorld }  from './component/roles/test1.jsx'
 
 class App extends Component {
   render() {
@@ -20,6 +21,8 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <p id="hello">哈哈哈 我是 哈哈哈</p>
+        <HelloWorld></HelloWorld>
       </div>
     );
   }
