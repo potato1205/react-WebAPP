@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 
 import ChildComponent from './ChildComponent.jsx';
 
+function HelloComponent(props) {
+    return <div>Hello world {props.name}</div>
+}
+
 export class HelloWorld extends Component {
 
     constructor(props, context) {
@@ -16,20 +20,24 @@ export class HelloWorld extends Component {
     render() {
         return (
             <div>
-                <p onClick={this.clickHandle.bind(this)} style={{color : this.state.a ? 'blue' : 'red'}}>
+                <p onClick={this.clickHandle.bind(this)} style={{ color: this.state.a ? 'blue' : 'red' }}>
                     hello world!
                 </p>
                 <p>
-                    ??? 
+                    ???
                     {/* {this.clickHandle()} */}
                 </p>
                 <ChildComponent name="lhy" />
+                <HelloComponent name="lhy 2"/>
+                <hr/>
+                {/* <ES5Component name="init"/> */}
             </div>
         )
     }
+    
     clickHandle() {
         console.log(this.state.a);
-        if(this.state.a === 0) {
+        if (this.state.a === 0) {
             this.setState({
                 a: 1
             });
@@ -41,7 +49,7 @@ export class HelloWorld extends Component {
     }
 
     style() {
-        if(this.a) {
+        if (this.a) {
             return {
                 color: 'red',
             }
