@@ -54,9 +54,4 @@ export class HelloWorld extends Component {
 
 }
 
-// render (
-//     <HelloWorld/>,
-//     document.getElementById('hello')
-// );
-
 // export HelloWorld;
