@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import { render } from 'react-dom';
+import { Router, Route, Link } from 'react-router'
 
 import ChildComponent from './ChildComponent.jsx';
 
@@ -15,9 +16,19 @@ export class HelloWorld extends Component {
             a: 0,
         }
     }
-    // a = 0;
+
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log('this.state.a: ', this.state.a);
+        console.log('nextState.a: ', nextState.a);
+        return true;
+    }
+
+    componentWillMount() {
+        console.log('componentWillMount');
+    }
 
     render() {
+        console.log('this.state.a  render: ', this.state.a);
         return (
             <div>
                 <p onClick={this.clickHandle.bind(this)} style={{ color: this.state.a ? 'blue' : 'red' }}>
@@ -34,6 +45,10 @@ export class HelloWorld extends Component {
             </div>
         )
     }
+
+    componentDidMount() {
+        console.log('componentDidMount');
+    }
     
     clickHandle() {
         console.log(this.state.a);
@@ -46,6 +61,7 @@ export class HelloWorld extends Component {
                 a: 0
             });
         }
+        console.log(this.state.a);
     }
 
     style() {
