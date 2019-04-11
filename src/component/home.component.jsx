@@ -30,7 +30,6 @@ class HomeComponent extends Component {
       store: createStore(reducer),
       count: 0,
     });
-    
   }
 
   render() {
