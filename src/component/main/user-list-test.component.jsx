@@ -22,7 +22,7 @@ class UserListTestComponent extends Component {
         return (
             <div>
                 我是为了测试传值而设置的page
-          <p>
+                <p>
                     名字是：{this.state.testName}
                 </p>
             </div>
