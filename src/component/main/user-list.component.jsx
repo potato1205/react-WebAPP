@@ -9,7 +9,7 @@ class UserListComponent extends Component {
   render() {
     return (
       <div>
-          我是预留为 user list列表的 page 我佛了
+          我是预留为 user list列表的 page 我佛了git
           <p>
             名字是：{this.props.match.params.name}
           </p>
