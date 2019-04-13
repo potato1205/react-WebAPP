@@ -3,12 +3,7 @@ import React, { Component } from 'react';
 class ReduxTestComponent extends Component {
 
     componentWillMount() {
-
-        // this.props.store.subscribe(() => {
-        //     console.log(this.props.store.getState());
-        // });
-
-
+        console.log(this.props);
     }
 
     render() {
@@ -28,14 +23,19 @@ class ReduxTestComponent extends Component {
     }
 
     add() {
+        console.log(this.props);
         this.props.store.dispatch({
-            type: 'INCREASE',
+            // reducerText: {
+                type: 'INCREASE',
+                count: 2,
+            // }
         });
     }
 
     reduce() {
         this.props.store.dispatch({
             type: 'DECREASE',
+            count: 5,
         });
     }
 }
