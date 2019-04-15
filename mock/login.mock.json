@@ -1,0 +1,14 @@
+{
+    "error": {
+        "returnCode": 0,
+        "returnMessage": "ok",
+        "returnUserMessage": "我是测试失败怎么展示文案"
+    },
+    "data": {
+        "userName": "小仙女",
+        "userUuid": 123123123,
+        "list": [
+            "001"
+        ]
+    }
+}
