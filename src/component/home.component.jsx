@@ -8,6 +8,8 @@ import UserListComponent from './main/user-list.component';
 import UserListTestComponent from './main/user-list-test.component';
 import ReduxTestComponent from './roles/redux-test.component';
 
+import LoginUIComponent from './login/login.UI';
+
 import reducerHome from '../config/reducer.config'
 
 class HomeComponent extends Component {
@@ -18,6 +20,8 @@ class HomeComponent extends Component {
       name: 'lhy',
       // count: 0,
     }
+
+    // console.log(this.props)
   }
 
   componentWillMount() {
@@ -35,6 +39,7 @@ class HomeComponent extends Component {
         hhh 我是home component
         <p>count 是 {this.state.count}</p>
         <hr></hr>
+        <LoginUIComponent name="lhy" />
         {/* ${} 感觉是表示在字符串中 对一个变量值的引用，表示解析 */}
         <p><Link to={`${this.props.match.path}/user-list/${this.state.store}`}>动态传值</Link></p>
         <p><Link to={`${this.props.match.path}/user-list-test?store=${this.state.store}`}>静态get方法传值</Link></p>
