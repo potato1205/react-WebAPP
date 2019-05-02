@@ -8,7 +8,7 @@ class LoginUIComponent extends Component {
 
     constructor(props) {
         super(props);
-        console.log(this.props);
+        console.log(this.props.loginFunc);
     }
     
     componentWillMount() {
@@ -18,25 +18,25 @@ class LoginUIComponent extends Component {
         return (
             <div>
                 <h1>klasikal Login Form</h1>
-                <div class="login-form">
-                    <div class="close"> </div>
-                    <div class="head-info">
-                        <label class="lbl-1"> </label>
-                        <label class="lbl-2"> </label>
-                        <label class="lbl-3"> </label>
+                <div className="login-form">
+                    <div className="close"> </div>
+                    <div className="head-info">
+                        <label className="lbl-1"> </label>
+                        <label className="lbl-2"> </label>
+                        <label className="lbl-3"> </label>
                     </div>
-                    <div class="clear"> </div>
-                    <div class="avtar">
+                    <div className="clear"> </div>
+                    <div className="avtar">
                         <img src={avtar} />
                     </div>
                     {/* <form> */}
-                    <input type="text" class="text" />
-                    <div class="key">
+                    <input type="text" className="text" />
+                    <div className="key">
                         <input type="password" />
                     </div>
                     {/* </form> */}
-                    <div class="signin">
-                        <input type="submit" value="Login" />
+                    <div className="signin">
+                        <input type="submit" value="Login" onClick={this.props.loginFunc}/>
                     </div>
                 </div>
             </div >
