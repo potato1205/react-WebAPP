@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 
+import LoginUIComponent from './login.UI';
+
 class LoginContainerComponent extends Component {
 
     componentWillMount() {
-        console.log(this.props);
     }
 
     render() {
         return (
-            <p>我是登录页</p>
+           <LoginUIComponent />
         );
+    }
+
+    login() {
+        
     }
 }
 

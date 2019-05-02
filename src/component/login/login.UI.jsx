@@ -8,13 +8,7 @@ class LoginUIComponent extends Component {
 
     constructor(props) {
         super(props);
-        console.log('loginUI: ', this.props);
-        console.log('loginUI: ', props);
-        // console.log('loginUI: ', this.props.name);
-        // console.log('loginUI: ', props.name);
-        this.state = {
-            userNameImg : '../../assets/images/avtar.png',
-        }
+        console.log(this.props);
     }
     
     componentWillMount() {
