@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-
 import './login.css';
-
 import avtar from '../../assets/images/avtar.png';
+import http from '../../server/server';
 
 class LoginUIComponent extends Component {
 
     constructor(props) {
         super(props);
-        console.log(this.props.loginFunc);
+        this.state = {
+            username: '',
+            password: '',
+        }
     }
     
     componentWillMount() {
@@ -30,17 +32,39 @@ class LoginUIComponent extends Component {
                         <img src={avtar} />
                     </div>
                     {/* <form> */}
-                    <input type="text" className="text" />
+                    <input type="text" className="text" onChange={this.changeUserName.bind(this)} />
                     <div className="key">
-                        <input type="password" />
+                        <input type="password" onChange={this.changePassword.bind(this)} />
                     </div>
                     {/* </form> */}
                     <div className="signin">
-                        <input type="submit" value="Login" onClick={this.props.loginFunc}/>
+                        <input type="submit" value="Login" onClick={this.login.bind(this)}/>
                     </div>
                 </div>
             </div >
         );
+    }
+
+    async login() {
+        console.log(this.state);
+        let params = {
+            username: this.state.username,
+            password: this.state.password,
+        }
+        const res = await http.get('/users/getUserInfo', params);
+        console.log(res);
+    }
+
+    changeUserName(e) {
+        this.setState({
+            username: e.target.value,
+        });
+    }
+
+    changePassword(e) {
+        this.setState({
+            password: e.target.value,
+        });
     }
 }
 

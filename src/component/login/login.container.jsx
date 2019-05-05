@@ -20,7 +20,8 @@ class LoginContainerComponent extends Component {
     }
 
     async login() {
-        const res = await http.get('/users/getUserInfo', {});
+        console.log(this.params);
+        const res = await http.get('/users/getUserInfo');
         console.log(res);
     }
 }
