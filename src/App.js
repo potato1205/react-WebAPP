@@ -8,13 +8,14 @@ import ReduxTestComponent from './component/roles/redux-test.component'
 import HomeComponent from './component/home.component';
 
 import LoginContainerComponent from './component/login/login.container';
+import RegisterdUIComponent from './component/login/registered.UI';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-          <Route path="/" component={LoginContainerComponent} />
-          <Route path="/registered" />
+          <Route path="/login" component={LoginContainerComponent} />
+          <Route path="/registered" component={RegisterdUIComponent}/>
 
           <Route path="/repos" component={ChildComponent} />
           <Route path="/about" component={Child2Compon} />

@@ -18,7 +18,7 @@ class LoginUIComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div class="login-body">
                 <h1>klasikal Login Form</h1>
                 <div className="login-form">
                     <div className="close"> </div>
@@ -46,11 +46,11 @@ class LoginUIComponent extends Component {
     }
 
     async login() {
-        console.log(this.state);
         let params = {
             username: this.state.username,
             password: this.state.password,
         }
+        console.log('params: ', params);
         const res = await http.get('/users/getUserInfo', params);
         console.log(res);
     }

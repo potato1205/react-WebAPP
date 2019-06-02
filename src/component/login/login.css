@@ -1,6 +1,6 @@
 
 /* reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+html,.login-body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 ol,ul{list-style:none;margin:0px;padding:0px;}
 blockquote,q{quotes:none;}
@@ -23,7 +23,7 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 /****-----start-body----****/
-body{
+.login-body {
 	background: url(../../assets/images/bg1.jpg) no-repeat 0px 0px;
 	font-family: 'Open Sans', sans-serif;
 	background-size:cover;
@@ -36,7 +36,7 @@ body{
 	margin: 0 auto;
 	width: 80%;
 }
-body a,form li,input[type="submit"],input[type="text"],.sixth-login input[type="submit"],.third-login input[type="submit"]{
+.login-body a,form li,input[type="submit"],input[type="text"],.sixth-login input[type="submit"],.third-login input[type="submit"]{
 	transition: 0.1s all;
 	-webkit-transition: 0.1s all;
 	-moz-transition: 0.1s all;
@@ -220,7 +220,7 @@ label.lbl-3 {
 	  background: url(../../assets/images/pass.png) no-repeat 376px 17px;
 	}
 	
-	body {
+	.login-body {
 	  min-height: 811px;
 	}
 }
@@ -231,7 +231,7 @@ label.lbl-3 {
 	.copy-rights {
 	  margin-top: 3em;
 	}
-	body {
+	.login-body {
 	  min-height: 768px;
 	}
 }
@@ -239,7 +239,7 @@ label.lbl-3 {
 	.key {
 	   background: url(../../assets/images/pass.png) no-repeat 336px 18px;
 	}
-	body {
+	.login-body {
 	  min-height: 711px;
 	}
 	.copy-rights {
@@ -259,7 +259,7 @@ label.lbl-3 {
 	h1 {
 	  padding-top: 2em;
 	}
-	body {
+	.login-body {
 	  min-height: 675px;
 	}
 }
@@ -271,7 +271,7 @@ label.lbl-3 {
 	.key {
 	  background: url(../../assets/images/pass.png) no-repeat 342px 18px;
 	}
-	body {
+	.login-body {
 	  min-height: 929px;
 	}
 }
@@ -337,7 +337,7 @@ label.lbl-3 {
 	.copy-rights {
 	  margin-top: 2em;
 	}
-	body {
+	.login-body {
 	    min-height: 504px;
 	}
 	input[type="submit"] {

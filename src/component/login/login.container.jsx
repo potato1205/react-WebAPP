@@ -21,7 +21,7 @@ class LoginContainerComponent extends Component {
 
     async login() {
         console.log(this.params);
-        const res = await http.get('/users/getUserInfo');
+        const res = await http.post('/users/getUserInfo', this.params);
         console.log(res);
     }
 }
